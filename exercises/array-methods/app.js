@@ -3,10 +3,14 @@ var vegetables = ["carrot", "tomato", "pepper", "lettuce"];
 // var food = [ 'apple','orange','watermelon',1,'carrot','tomato','pepper',3]
 
 var newVeg = vegetables.pop();
-// console.log(vegetables);
+console.log("fruit: ", fruit);
+console.log("vegetables: ", vegetables);
+console.log("newVeg", newVeg);
 
 var newFruit = fruit.shift();
-// console.log(fruit);
+console.log("fruit: ", fruit);
+console.log("vegetables: ", vegetables);
+console.log("newFruit", newFruit);
 
 var index = fruit.indexOf("orange");
 // console.log(index);
@@ -30,4 +34,4 @@ var reverse = food.reverse();
 // console.log(reverse);
 
 var string = food.join(", ");
-console.log(string);
+// console.log(string);
