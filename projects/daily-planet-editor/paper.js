@@ -11,7 +11,7 @@ just fix the existing ones.
 
 var enemies = ["Lex", "Batman", "Darkside", "Brainiac", "General Zod", "Doomsday"];
 
-function whoWins(isThereKryptonite, enemyName){
+function whoWins(isThereKryptonite, enemyName) {
   if (!isThereKryptonite) {
       return "Superman beats " + enemyName + ", of course";
   } else {
@@ -19,7 +19,7 @@ function whoWins(isThereKryptonite, enemyName){
   }
 }
 
-for (var i = 0; i < enemies.length; i++){
+for (var i = 0; i < enemies.length; i++) {
     var isThereKryptonite;
     if (i % 2 === 0) {
         isThereKryptonite = true;
@@ -39,7 +39,7 @@ console.log(howAttractedIsLoisLaneToMe());
 var clarkKent = true;
 var superman = false;
 
-while (clarkKent){
+while (clarkKent) {
     console.log("I'm just a nerdy columnist");
     var phoneBoothQuickChange = Math.random();
     if (phoneBoothQuickChange >= 0.5) {
