@@ -26,6 +26,7 @@ var lyrics = ["This", "hit", "that", "ice", "cold",
 //   console.log(otherArr.join(" "));
 // }
 // evenLyrics(lyrics);
+
 function reverseEveryTwo() {
   var reversed = [];
   for (var i = 1; i < lyrics.length; i +=2) {

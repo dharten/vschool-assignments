@@ -38,34 +38,43 @@
 //   console.log(names);
 //   break;
 // }
-var names = []
-var occupations = []
-var peopleArray = [
-  {
-    name: "Harrison Ford",
-    occupation: "Actor"
-  },
-  {
-    name: "Justin Beiber",
-    occupation: "Singer"
-  },
-  {
-    name: "Vladmir Putin",
-    occupation: "Politition"
-  },
-  {
-    name: "Oprah",
-    occupation: "Entertainer"
-  }
-]
-for (var i = 0; i < peopleArray.length; i++) {
-  if (i % 2 === 0){
-    names.push(peopleArray[i].name);
-    continue;
-  }
-  if (i % 2 !== 0){
-    occupations.push(peopleArray[i].occupation)
+// var names = []
+// var occupations = []
+// var peopleArray = [
+//   {
+//     name: "Harrison Ford",
+//     occupation: "Actor"
+//   },
+//   {
+//     name: "Justin Beiber",
+//     occupation: "Singer"
+//   },
+//   {
+//     name: "Vladmir Putin",
+//     occupation: "Politition"
+//   },
+//   {
+//     name: "Oprah",
+//     occupation: "Entertainer"
+//   }
+// ]
+// for (var i = 0; i < peopleArray.length; i++) {
+//   if (i % 2 === 0){
+//     names.push(peopleArray[i].name);
+//     continue;
+//   }
+//   if (i % 2 !== 0){
+//     occupations.push(peopleArray[i].occupation)
+//   }
+// }
+// console.log(names);
+// console.log(occupations);
+
+var matrix = [];
+for (var i = 0; i < 3; i++){
+  matrix[i] = [];
+  for (var j = 0; j < 3; j++ ){
+    matrix[i][j] = 0;
   }
 }
-console.log(names);
-console.log(occupations);
+console.log(matrix);
