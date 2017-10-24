@@ -1,0 +1,13 @@
+.box {
+  height: 500px;
+  width: 500px;
+  background-color: black;
+}
+
+@media (min-width:500px) and (max-width: 800px) {
+  .box {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    }
+}

@@ -1,9 +1,10 @@
+body {
+  background-image: url("flag.jpg");
+  background-size: 700px;
+}
+
 h1 {
   background-color: red;
   text-align: center;
   top: 0;
-}
-
-#flag {
-text-align: center;
 }
