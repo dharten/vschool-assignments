@@ -1,0 +1,14 @@
+.square {
+  height:500px;
+  width:500px;
+  background-color:purple;
+  hover: blue;
+
+}
+
+/*.square:hover {
+  background-color: blue;
+}
+ .square:active {
+   background-color: red;
+ }*/
