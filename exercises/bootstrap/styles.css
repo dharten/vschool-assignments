@@ -1,0 +1,16 @@
+.navbar-default {
+    background-color: rgba(0, 6, 8, 0.41);
+    border-color: #dc0707;
+  }
+
+.container {
+  width: 80%;
+  background-color: darkblue;
+  height: 500px;
+}
+
+.col-xs-1 {
+    background-color: rgba(25, 71, 86, 0.67);
+    height: 100px;
+  /*border: solid black 2px;*/
+}
