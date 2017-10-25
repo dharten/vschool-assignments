@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  margin: 0;
+}
+
+h4 {
+  display: inline-block;
+}
+
+.addition {
+  background-color: #FFD70D;
+  text-align: center;
+  border: white solid 2px;
+}
+
+.subtraction {
+  background-color: #80580C;
+  text-align: center;
+  border: white solid 2px;
+}
+
+.multiply {
+  background-color: #FF6B00;
+  text-align: center;
+  border: white solid 2px;
+}
+
+.divide {
+  background-color: #E86C55;
+  text-align: center;
+  border: white solid 2px;
+}
