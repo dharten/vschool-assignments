@@ -6,17 +6,52 @@
 </head>
 
 <body>
+
   <h1 id="title">Mario Pest Control</h1>
 
-  <h2 class="pest">Goomba</h2>
-  <img src="goomba.jpeg"/>
-  <h3 class="costPer">Price per Catch: 5 Coins</h3>
-  <h3 class="totalCaught">Number Caught<span</h3>
-  <input type="text" id="count"/></br>
-  <button id="compute">Total Cost for Goomba</button>
+  <div class="goomba">
+    <h2 class="pest">Goomba</h2>
+    <h3 class="costPer">Price: <span id="goombaCost">5</span> Coins</h3>
+    <div class="img" id="goombaImg"></div>
+    <h3 class="totalCaught"># Caught</h3>
+    <input type="text" id="goombaCount" class="total"/>
+    <h3 class="cost">Cost: <span id="goombaValue"></span></h3>
+  </div>
+
+  <div class="bob-ombs">
+    <h2 class="pest">Bob-ombs</h2>
+    <h3 class="costPer">Price: <span id="bobCost">7</span> Coins</h3>
+    <div class="img" id="bob"></div>
+    <h3 class="totalCaught"># Caught</h3>
+    <input type="text" id="bobCount" class="total"/>
+    <h3 class="cost">Cost: <span id="bobValue"></span></h3>
+
+  </div>
+
+  <div class="cheep-cheep">
+    <h2 class="pest">Cheep-cheep</h2>
+    <h3 class="costPer">Price: <span id="cheepCost">11</span> Coins</h3>
+    <div class="img" id="cheep"/></div>
+    <h3 class="totalCaught"># Caught</h3>
+    <input type="text" id="cheepCount" class="total"/>
+    <h3 class="cost">Cost: <span id="cheepValue"></span></h3>
 
 
+  </div>
 
-  <script src="main.js"/>
+</br>
+
+
+  <button id="compute">Compute</button>
+  <h3>Grand Total: <span id="grandTotal"></span></h3>
+
+  <div class="footer">
+    <p>Email: mario@pestgetters.com</p>
+    <p>http://www.pestgetters.com</p>
+    <p>123 West In the Web Ave, URL city, Worldwide 12345</p>
+  </div>
+
+
+  <script src="main.js"></script>
 </body>
 </html>
