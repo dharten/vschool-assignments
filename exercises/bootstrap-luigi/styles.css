@@ -1,0 +1,33 @@
+container {
+  width: 960px;
+  margin: 0;
+}
+
+@font-face {
+  font-family: marioFont;
+  src: url(super-mario256.ttf);
+}
+
+.one {
+  background-color: #d4d411;
+  height: 80px;
+}
+
+.two {
+  background-color: red;
+  height: 320px;
+}
+
+.three {
+  height: 80px;
+  text-align: center;
+}
+
+.four {
+  height: 160px;
+}
+
+.five {
+  background-color: #d4d411;
+  height: 80px;
+}
