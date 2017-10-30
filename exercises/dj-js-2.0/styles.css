@@ -1,0 +1,86 @@
+.circle-container {
+    position: relative;
+    width: 34em;
+    height: 34em;
+    padding: 2.8em;
+    border: dashed 1px;
+    border-radius: 50%;
+    margin: 7.75em auto;
+}
+
+.circle-container>div {
+    display: block;
+    position: absolute;
+    top: 50%; left: 50%;
+    width: 4em; height: 4em;
+    margin: 0em;
+}
+
+.circle-container .box {
+   display: block;
+   width: 3px;
+   height: 3px;
+ }
+.one { transform: rotate(0deg) translate(20em) rotate(180deg); } /* 20em = half the width of the wrapper */
+.two { transform: rotate(60deg) translate(20em) rotate(-45deg); }
+.three { transform: rotate(120deg) translate(20em) rotate(-135deg); }
+.four { transform: rotate(0deg) translate(-20em); }
+.five { transform: rotate(240deg) translate(20em) rotate(-225deg); }
+.six { transform: rotate(300deg) translate(20em) rotate(90deg); }
+.seven { transform: rotate(300deg) translate(0em) rotate(150deg); }
+
+
+.box {
+  height: 1px;
+  width: 1px;
+  background-color: darkorange;
+  border: 1px solid black;
+  box-shadow: 0px 0px 20px #000;
+  transition: 1s all ease-in;
+}
+
+.one:hover {
+  width: 250px;
+  box-shadow: -400px 0px 34px #150;
+  background-color: #345;
+  border: 4px, solid;
+  padding: 50px;
+}
+
+/*.two {
+  margin-left: 102px;
+}
+
+.two:hover {
+  width: 250px;
+  box-shadow:560px 0px 34px #150;
+  background-color: #789;
+  border: 4px, solid blue;
+  border-radius: 40%;
+  padding: 50px;
+}
+
+.three {
+  margin-left: 204px;
+}
+
+.three:hover {
+  width: 250px;
+  box-shadow: -200px 560px 34px #150;
+  background-color: #789;
+  border: 4px, solid blue;
+  border-radius: 10%;
+  padding: 100px;
+}
+
+.four {
+  margin-left: 306px;
+}
+
+.five {
+  margin-left: 408px;
+}
+
+.six {
+  margin-left: 510px;
+}*/

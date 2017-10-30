@@ -1,0 +1,13 @@
+.greenSpace {
+  background: url("huntington.jpg");
+  background-repeat: no-repeat;
+  height: 230px;
+}
+
+h1 {
+  margin-top: 0px;
+}
+
+.dotUnderline {
+  border-bottom: 1px dotted #000;
+}
