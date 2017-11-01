@@ -1,0 +1,62 @@
+{
+  "appetizers": [{
+    "name": "Chips",
+    "ingredients": ["Salt", "Sugar", "Potatoes", "Seasoning"],
+    "description": ["Sweet and/or salty, crunchy snack"],
+    "price": 1.00
+    }
+  {
+    "name": "Crackers",
+    "ingredients": ["Flour", "Salt", "Stuff"],
+    "description": "Salty and simple things to munch on while you wait for your sandwich to be maid",
+    "price": 0.25
+    }],
+  "cold Sandwiches": [{
+    "name": "BLT",
+    "ingredients": ["Bacon", "Lettuce", "Tomato"],
+    "description": "Mouth watering",
+    "price": 4.50
+    }
+  {
+    "name": "PB&J",
+    "ingredients": ["Peanut-butter", "Jelly"],
+    "description": "Light and simple sandwich to eat on the go",
+    "price": 2.00
+    }],
+  "hot sandwiches": [{
+    "name": "Meatball Sub",
+    "ingredients": ["Meatballs", "Cheese", "Choice of bread"],
+    "description": "Hot meatballs with melted cheese on your choice of bread",
+    "price": 4.50
+    }
+  {
+    "name": "Philly Cheese-Steak",
+    "ingredients": ["Strip loin", "Provolone Sauce", "Sauteed Mushrooms", "Caramelized Onions"],
+    "description": "Heaven in your mouth",
+    "price": 4.50
+    }],
+  "desserts": [{
+    "name": "Chocolate-Chip",
+    "ingredients": ["Chocolate-Chips", "Flour", "Sugar", "Eggs"],
+    "description": "Fresh and gooie sugar",
+    "price": 0.75
+    }
+  {
+    "name": "Brownies",
+    "ingredients": ["Eggs", "Flour", "Salt", "Baking Powder"],
+    "description": "Best Brownies this side of the Wasatch",
+    "price": 0.75
+    }],
+  "drinks": [{
+    "name": "Hot Chocolate",
+    "ingredients": ["Steamed Mild", "Chocolate", "Marshmellows"],
+    "description": "Stay Warm and frisky",
+    "price": 1.50
+    }
+  {
+    "name": "Water",
+    "ingredients": ["h2o", "Choice of added flavor", "Likely some flouride too"],
+    "description": "Keep hydrated my friend",
+    "price": 1.00
+    }]
+}

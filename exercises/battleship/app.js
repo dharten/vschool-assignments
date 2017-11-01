@@ -55,7 +55,6 @@ function playGame () {
   displayBattle();
 }
 battleGround(0, 9);
-displayBattle();
 while (true) {
   playGame();
 }
