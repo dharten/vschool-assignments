@@ -3,6 +3,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="style.css">
   <title>ToDo</title>
 </head>
 
@@ -10,15 +11,17 @@
 
   <div class="container">
 
-    <h1>To Do</h1>
-
-    <div id="todoItem"></div>
-  </br>
+    <h1>To Do's</h1>
 
     <form>
-      <input type="text" id="newTodo">
-      <input type="text" id="newCost">
-      <button type="button" id="newItem">Add New Item</button>
+      Task: <input type="text" id="newTodo">
+      Price (optional): <input type="text" id="newCost">
+      Description (optional): <input type="text" id="newDescription">
+      <button type="button" id="submit">Submit</button>
+    </form>
+
+    <form>
+      <div id="todoItems"></div>
     </form>
 
 
