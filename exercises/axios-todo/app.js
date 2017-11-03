@@ -30,10 +30,33 @@ function createTodoElement (todo, id) {
   + "<br></br>";
 }
 
-function lineoutTodo (checkboxId) {
-  console.log(checkboxId) // [i]
-  var todoId = 'todo_' + checkboxId // 'todo_0'
-  console.log(todoId) //getElementById(todoId) <div id="todo_0">...</div>
+// console.dir(document.getElementsByClassName("check"))
+// var checkBoxes = document.getElementsByClassName('check')
+// for (var i = 0; i < checkBoxes.length; i++) {
+//   if(checkBoxes[i].checked === true) {
+//     document.getElementById(todo_i).style.text-decoration = line-through;
+//   }
+// }
+
+function lineoutTodo () {
+  var checkBoxes = document.getElementsByClassName('check')
+  for (var i = 0; i < checkBoxes.length; i++) {
+    if(checkBoxes[i].checked === true) {
+      document.getElementById('todo_' + i).style.textDecoration = "line-through";
+    }
+  }
+
+  // console.dir(checkboxId) // i
+  // console.log(todoId);
+  // console.log(checkboxId[0])
+  // var todoId = 'todo_' + checkboxId // 'todo_i'
+  // console.log(todoId) //getElementById(todoId) <div id="todo_0">...</div>
+  // document.getElementById(createTodoElement(id)).addEventListener('click', function() {
+  //   var strikethrough = document.getElementById('todoId');
+  //   strikethrough.style.setProperty("text-decoration", "line-through");
+  // })
+    // todoId = checkboxId;
+    // console.log(todoId);
 }
 
 loadTodos();
