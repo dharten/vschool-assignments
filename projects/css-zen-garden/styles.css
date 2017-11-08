@@ -1,3 +1,34 @@
+* {
+  box-sizing:border-box;
+}
+
+html {
+  background-image: url("bamboo.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+body {
+  background-color: transparent;
+}
+
+@font-face {
+  font-family: "julius";
+  src:url("https://fonts.gstatic.com/s/juliussansone/v6/iU65JP9acQHPDLkdalCF7pbhOpL-vLTkIjCTuVYsuO0.woff2");
+}
+
+@font-face {
+  font-family: "libre";
+  src: url("http://fonts.gstatic.com/s/librebaskerville/v5/pR0sBQVcY0JZc_ciXjFsK8j0T1k_tV7QYhgnOhA2764.woff2");
+}
+
+@font-face {
+  font-family: 'libreitalic';
+  src: url('https://fonts.gstatic.com/s/librebaskerville/v5/QHIOz1iKF3bIEzRdDFaf5fbsUggLxuOzHNuXcSFlTaY.woff2');
+}
+
 .greenSpaceTop {
   background: url("huntington.jpg");
   background-attachment: fixed, scroll;
@@ -26,23 +57,54 @@ h1 {
   margin-top: 0px;
   padding-top: 30px;
   padding-bottom: 5px;
-  font-family: 'Julius Sans One', sans-serif;
+  font-family: "julius";
+  color: white;
+}
+
+.viewDesigns {
+  margin-top: 50px;
+  height: 50px;
+  line-height: 25px;
+  background-color: rgba(255, 255, 255, 0.31);
+  font-family: "julius";
+}
+
+.viewDesigns:hover {
+  background-color: rgba(255, 255, 255, 0.61);
+  transition: ease-in-out .5s;
 }
 
 .italic {
   font-style: italic;
   margin: 0px 0px 0px 112px;
+  font-family: 'libreitalic';
+}
+
+.italicTwo {
+  font-family: 'libreitalic';
+}
+
+.byItalic{
+  color: rgba(51, 51, 51, 0.54);
+  font-family: 'libreitalic';
 }
 
 h3 {
   margin-left: 10%;
   font-weight: 200;
+  font-family: "julius";
+}
+
+h4 {
+  font-family: 'libreitalic';
+      color: rgba(255, 255, 255, 0.48);
 }
 
 .demonstration {
   width: 80%;
   margin-left: 10%;
   margin-top: 25px;
+  font-family: "libre";
 }
 
 .link {
@@ -56,7 +118,7 @@ h3 {
 .link:hover {
   padding: 3px;
   border: 1px solid green;
-  background-color: green;
+  background-color: #0d8ba1;;
 }
 
 .enlightenment {
@@ -87,6 +149,7 @@ h3 {
 p {
   margin: .5em;
   line-height: 1.75;
+  font-family: "libre";
 }
 
 .lightGreen {
@@ -102,17 +165,67 @@ p {
       background-image: url(contours.png), url(gridlines.png), url(noise.png), url(koi.jpg);
 }
 
+.greenSpaceBot .footerText {
+  margin-top: 25px;
+  padding-top: 50px;
+  color: rgba(239, 231, 231, 0.71);
+  font-family: "libre";
+  text-align: center;
+  line-height: 1.5em;
+}
+
 .drkGreenSpace {
   background-color: #325050;
   height: 100px;
 }
 
+.containerBottom {
+  background-color: #c0cac3;
+  margin: 0;
+  background: ##edf4f0;
+}
+
+.ulSupport {
+  background-color: rgba(50, 80, 80, 0.5);
+  margin: 0;
+}
+
+.support {
+  border-top: solid 1px #a0b9ad;
+  height: 71px;
+  font-family: "julius";
+  font-size: 1.2em;
+}
+
+.article {
+  font-family: "julius";
+  font-size: 1.2em;
+}
+
 .bottomLinks {
-  width: 50%;
-  margin-left: 80px;
+  width: 49%;
   padding: 15px;
+  list-style-type: none;
+  border-top: solid 1px #d9e3dc;
+  display: inline-block;
 }
 
 span.italic {
   margin-left: 0;
+  font-size: .8em;
+}
+
+span.italicTwo {
+  color: rgba(240, 241, 240, 0.37);
+}
+
+/*footer .footerText {
+  color: rgba(239, 231, 231, 0.71);
+  font-family: "libre";
+  text-align: center;
+}*/
+
+b {
+  font-family: "libre";
+  font-size: .8em
 }

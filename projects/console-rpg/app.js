@@ -111,7 +111,6 @@ function fight(){
 function attackMonster(){
   const attackPower = Math.floor(Math.random() * 10)
   monsters[currentMonster].hp -= attackPower;
-  // console.log(`Your attack has taken ${attackPower} HP from the ${monsters[currentMonster].monster}`)
 }
 
 function monsterAttack(){
