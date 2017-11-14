@@ -29,22 +29,10 @@ class VacationDestinations extends Component {
       ]
     }
   render() {
-    // const {backgroundColor} = this.props;
-    // const colorStyles {
-    //   backgroundColor,
-    // }
-    // {switch (this.vacationSpots.timeToGo) {
-    //   case "Spring":
-    //     this.styles.backgroundColor = 'green'
-    //     break;
-    //   default:
-    //     this.styles.backgroundColor = 'blue'
-    //     break;
-    //   }
-    // }
     return (
-      this.vacationSpots.map(vacationSpot => {
+      this.vacationSpots.map((vacationSpot, i) => {
         let seasonColor;
+        let moneySign;
         {switch (vacationSpot.timeToGo){
           case "Spring":
             seasonColor = "green"
@@ -60,11 +48,20 @@ class VacationDestinations extends Component {
             break;
           default:
         }}
-        console.log(vacationSpot.timeToGo, seasonColor);
-        return <Vacation style={seasonColor}
+        // let newPrice = vacationSpot.price.split(" ");
+      //   {if (vacationSpot.price > "$1000") {
+      //     moneySign = "$$$";
+      //   }else if (vacationSpot.price < "$1000" && vacationSpot.price > "$500") {
+      //     moneySign = "$$";
+      //   }
+      // }
+        console.log(vacationSpot.price);
+        return <Vacation
+          key={vacationSpot.place, i}
           title={vacationSpot.place}
           price={vacationSpot.price}
           season={vacationSpot.timeToGo}
+          backgroundColor={seasonColor}
         />
       })
     )}
