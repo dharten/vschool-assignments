@@ -4,9 +4,8 @@ class Individual extends Component {
   render(props) {
     return (
       <div>
-        <ol>
           <li>{ this.props.name }</li>
-        </ol>
+          <button>Delete</button>
       </div>
     )
   }
