@@ -5,8 +5,8 @@ class Persons extends Component {
   constructor() {
     super();
       this.state = {
-        names: [],
-        input: ""
+        names: ["dan", "tony", "tiger"],
+        input: "",
       }
       this.handleChange = this.handleChange.bind(this);
       this.handleSubmit = this.handleSubmit.bind(this);
@@ -16,6 +16,7 @@ class Persons extends Component {
     this.setState({input: event.target.value})
   }
 
+//revamp
   handleSubmit(event) {
     this.state.names.push(this.state.input)
     this.setState({names: this.state.names})
@@ -34,16 +35,20 @@ class Persons extends Component {
             />
           </label>
           <button onClick={this.handleSubmit}>Submit</button>
-          <h1>{ this.state.input }</h1>
+          <h1>Name</h1>
         </form>
-        {this.state.names.map((name, i) => {
-          return (
-              <Individual
-                key={ name + i }
-                name={ name }
-              />
-          )
-        })}
+        <ol>
+          {this.state.names.map((name, i) => {
+            return (
+                <Individual
+                  key={ name + i }
+                  name={ name }
+                  delete={ this.handleDelete }
+                />
+              )
+            })
+          }
+        </ol>
       </div>)
   }
 }
