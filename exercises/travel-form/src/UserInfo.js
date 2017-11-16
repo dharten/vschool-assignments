@@ -1,5 +1,4 @@
 import React, {Component} from "react";
-import Display from "./Display";
 
 class UserInfo extends Component {
   constructor() {
@@ -7,61 +6,152 @@ class UserInfo extends Component {
     this.state = {
       fname: "",
       lname: "",
-      users: []
+      age: "",
+      gender: "",
+      destination: "",
+      dietaryRestrictions: [
+        {
+          id: 1,
+          label: "Vegetarian",
+          checked: false
+        },
+        {
+          id: 2,
+          label: "Lactose Intollerant",
+          checked: false
+        },
+        {
+          id: 3,
+          label: "Kosher",
+          checked: false
+        },
+        {
+          id: 3,
+          label: "Mamaz cooking",
+          checked: false
+        }
+
+      ]
     }
-    this.handleName = this.handleName.bind(this);
-    // this.handleLastName = this.handleLastName.bind(this);
-    // this.handleSubmit = this.handleSubmit.bind(this);
+    this.handleUserData = this.handleUserData.bind(this);
+    this.handleToggleRestriction = this.handleToggleRestriction.bind(this);
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
-  handleName (event) {
-    console.log({ [event.target.name]: event.target.value })
+  handleUserData(event) {
     this.setState({ [event.target.name]: event.target.value })
   }
 
-  // handleLastName (event) {
-  //   this.setState({ lname: event.target.value })
-  // }
+  handleToggleRestriction(restriction) {
+    restriction.checked = !restriction.checked
+  }
 
   handleSubmit (event) {
     event.preventDefault();
-    this.setState({ users: [...this.state.users, this.state.fname, this.state.lname] })
-    // this.setState(prevState => {
-    //   const users = [...prevState.users];
-    //   users.push.apply(users, [prevState.fname, prevState.lname]);
-      // return { users, [fname:"", lname:""}
-    // })
+    alert(`First Name: ${ this.state.fname }
+      Last Name: ${ this.state.lname }
+      Age: ${ this.state.age }
+      Gender: ${ this.state.gender }
+      Destination: ${ this.state.destination }
+      Dietary Restrictions:${ this.state.dietaryRestrictions.map(restriction => {
+        if (restriction.checked) {
+          return " " + restriction.label
+        } else {
+          return null
+        }
+      })
+    }`)
   }
 
+  this.state.dietaryRestrictions.map(restriction => {
+          if (restriction.checked) {
+            return " " + restriction.label
+          } else {
+            return null
+          }
+        })
+      }
+
+
   render() {
-    const user = this.state.users.map((user, i) => {
-      return <Display key={ user + i }
-                      name={ user }
-      />
-    })
     return(
-      <div>
         <form onSubmit={ this.handleSubmit }>
-          <label>
-            First Name:
-              <input  type="text"
-                      name="fname"
-                      value={ this.state.fname }
-                      onChange={ this.handleName }
-              />
-            Last Name:
-              <input  type="text"
-                      name="lname"
-                      value={ this.state.lname }
-                      onChange={ this.handleName }
-              />
-          </label>
-          <button>Submit</button>
+            <div>
+              <label>
+                First Name:
+                <input name="fname"
+                  value={ this.state.fname }
+                  onChange={ this.handleUserData }
+                />
+                Last Name:
+                  <input name="lname"
+                    value={ this.state.lname }
+                    onChange={ this.handleUserData }
+                  />
+              </label>
+            </div>
+          <div>
+            <label>
+              Age:
+                <input name="age"
+                  value={ this.state.age }
+                  onChange={ this.handleUserData }
+                  type="number"
+                />
+            </label>
+          </div>
+          <div>
+            <label>
+              Gender:
+                Male
+                <input name="gender" value="male" type="radio" onChange={ this.handleUserData } />
+                Female
+                <input name="gender"     value="female"     type="radio"     onChange={ this.handleUserData }   />
+                Neither
+                <input name="gender"
+                  value="neither"
+                  type="radio"
+                  onChange={ this.handleUserData }
+                />
+            </label>
+          </div>
+          <div>
+            <label>
+              Destination:
+              <select name="destination"
+                onChange={ this.handleUserData }>
+                <option></option>
+                <option name="destination"
+                  value="Denver, CO"
+                  onChange={ this.handleUserData }>
+                  Denver, CO
+                </option>
+                <option name="destination"
+                  value="Jacksonville, FL"
+                  onChange={ this.handleUserData }>
+                  Jacksonville, FL
+                </option>
+                <option name="destination"
+                  value="Perth, AUS"
+                  onChange={ this.handleUserData }>
+                  Perth, AUS
+                </option>
+              </select>
+            </label>
+          </div>
+          {this.state.dietaryRestrictions.map((restriction, i) => {
+            return <div>
+                      <input key={ restriction + i }
+                        name={ restriction.label }
+                        id={ restriction.id }
+                        value={ restriction.label }
+                        type="checkbox"
+                        onChange={ () => this.handleToggleRestriction(restriction) }
+                      />{ restriction.label }
+                    </div>
+          })}
+          <button onClick={ this.handleSubmit }>Submit</button>
         </form>
-        <ol>
-          {user}
-        </ol>
-      </div>
     )
   }
 }
