@@ -1,14 +1,11 @@
 import React from "react";
 import ReactDOM from "react-dom";
+import { BrowserRouter } from "react-router-dom";
 import App from "./App";
-import Game from "./Game";
 
 ReactDOM.render(
-  <div className="main-container">
+  <BrowserRouter>
     <App />
-    <div className="container">
-      <Game />
-    </div>
-  </div>,
+  </BrowserRouter>,
   document.getElementById('root')
 )

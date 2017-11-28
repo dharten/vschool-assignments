@@ -1,6 +1,4 @@
 import React from "react";
-// import Table from "./Table"
-
 
 class Form extends React.Component {
   constructor(props) {
@@ -15,8 +13,8 @@ class Form extends React.Component {
       smackTalk: [
         "I pity the fool.",
         <iframe width="860" height="615" src="https://www.youtube.com/embed/enMReCEcHiM?rel=0&amp;controls=0&amp;showinfo=0?rel=0&autoplay=1" frameborder="0" allowfullscreen></iframe>,
-        "When I was growing up, my family was so poor we couldn't afford to pay attention.",
-        "I'm so good... I should be illegal!"
+        "I'm so good... I should be illegal!",
+        "Your Mother was a Hamster, and your Father smelt of Elderberries!!"
       ]
     }
     this.smack = "";
@@ -31,10 +29,10 @@ class Form extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    sessionStorage.setItem("today", JSON.stringify(this.state))
+    sessionStorage.setItem("yesterday", JSON.stringify(this.state))
     const obj = { name: this.state.name, game: this.state.game,
       date: this.state.date, score: this.state.score, checked: this.state.checked };
-    this.setState({ players: [...this.state.players, obj],
+    this.setState({ players: [obj, ...this.state.players],
       name: "", game: "Color Flood", date: "", score: "", checked: false })
     this.smack = this.state.checked ? this.state.smackTalk[Math.floor(Math.random()*this.state.smackTalk.length)] : null;
     e.target[4].checked = false
@@ -46,14 +44,13 @@ class Form extends React.Component {
 
   render() {
     const styles = {
-      height: "400px",
+      height: "355px",
       border: "solid white 2px",
       float: "right",
       marginTop: "100px",
-      marginRight: "3%",
-      marginLeft: "3%",
-      minWidth: "560px",
-      maxWidth: "1860px",
+      marginRight: "20px",
+      minWidth: "360px",
+      maxWidth: "50%",
       backgroundColor: "#FF9800",
       textAlign: "center"
     }
@@ -113,9 +110,6 @@ class Form extends React.Component {
          </table>
          <h3>{ this.smack }</h3>
         </div>
-
-        // {/* <Table name={ this.state.name } game={ this.state.game }
-        //   date={ this.state.date } score={ this.state.score }/> */}
     )
   }
 }

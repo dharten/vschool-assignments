@@ -3,8 +3,8 @@ body {
   padding: 0;
   font-family: Sans-Serif;
   background-color: #1d1e19;
-  /*margin-left: 10%;
-  margin-right: 10%;*/
+  margin-left: 20px;
+  /*margin-right: 10%;*/
 }
 
 h1 {
@@ -46,4 +46,13 @@ h1 {
 	background: linear-gradient(to bottom, #e0e0e0, #b0b0b0);
 	cursor: pointer;
 	margin: 0;
+}
+
+.main-container {
+  max-width: 1024px;
+  margin: 0 auto;
+}
+
+.container {
+  width: 50%;
 }
