@@ -1,14 +1,21 @@
 import React from "react";
 import {connect} from "react-redux";
+import {getAllTodos} from "../../redux/contacts";
 
-function ContactsList(props) {
-  const contacts = props.contacts.map(
-    (contact, i) => <li key={ contact.name + i }>{ contact.name }</li>)
-  return(
-    <ul>
-      { contacts }
-    </ul>
-  )
+class ContactsList extends React.Component {
+  componentDidMount() {
+    this.props.getAllTodos();
+  }
+
+  render() {
+    const contacts = this.props.contacts.map(
+      (contact, i) => <li key={ contact._id + i }>{ contact.title }</li>)
+    return(
+      <ul>
+        { contacts }
+      </ul>
+    )
+  }
 }
 
-export default connect(state => state, null)(ContactsList);
+export default connect(state => state, { getAllTodos })(ContactsList);

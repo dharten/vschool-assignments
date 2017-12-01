@@ -1,8 +1,8 @@
-import React from "react";
-import ReactDOM from "react-dom";
-import App from "./App";
+function indices() {
+  const arr = [];
+  for (let i = 0; i < arr.length; i++) {
+    console.log(i);
+  }
+}
 
-ReactDOM.render(
-  <App />,
-  document.getElementById('root')
-)
+indices([1, 2, 3], 4)
