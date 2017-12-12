@@ -1,8 +1,25 @@
-function larger() {
-  let multiplier = 9
-	for(let i = 1; i <=10; i++) {
-    let result = multiplier * i;
-    console.log(`${i} * ${multiplier} = ${result}`);
-  }
+function removeVowels(str) {
+  arr = str.split("");
+  return arr.reduce((prev, currentChar) => {
+    let c = currentChar.toLowerCase();
+    if (c === "a" || c === "e" || c === "i" || c === "o" || c === "u") {
+      prev.vowels += currentChar
+    } else {
+      prev.str += currentChar
+    }
+    prev.str += currentChar
+    return prev
+  }, {str: "", vowels: ""})
 }
-larger()
+
+removeVowels("Pickle Rick!")
+
+function vowels(string) {
+
+    return {
+        cons: string.toLowerCase().match(/[^aeiou\s]+/g).join(""),
+        vowels: string.toLowerCase().match(/[aeiou]+/g).join("")
+    }
+}
+
+console.log(vowels("Pickle Rick!"))
