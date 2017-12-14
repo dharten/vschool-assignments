@@ -38,10 +38,11 @@ peopleRoutes.route("/:id")
   // })
 
   .put((req, res) => {
-    People.find({_id: req.params.id}, req.body, (err, person) => {
-      console.log(req.body);
+    People.findById(req.params.id, (err, person) => {
       if (err) return res.status(500).send(err);
-      res.send({message: "updated", person})
+      if (req.body.address) {
+        person.address = Object.assign(person.location, req.body.location)
+      }
     })
   })
 
